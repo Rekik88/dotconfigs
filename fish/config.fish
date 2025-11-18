@@ -130,7 +130,11 @@ alias jctl="journalctl -p 3 -xb"
 # Recent installed packages
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl" 
 
+# Arch
 alias yay="paru"
 alias yayf="paru -Slq | fzf --multi --preview 'paru -Sii {1}' --preview-window=down:75% | xargs -ro paru -S"
+# Fedora
+# alias dnff="dnf --repoquery --qf '{$name\n}' | fzf --multi --preview 'dnf info {1}' --preview-window=down:75% | xargs -ro sudo dnf install"
+
 
 starship init fish | source
