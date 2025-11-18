@@ -1,5 +1,5 @@
 ﻿## Source from conf.d before our fish config
-source conf.d/done.fish
+source ~/.config/fish/conf.d/done.fish
 
 ## Set values
 ## Run fastfetch as welcome message
@@ -92,9 +92,9 @@ end
 
 ## Useful aliases
 # Replace ls with eza
-alias ls='eza -al --color=always --group-directories-first --icons' # preferred listing
+alias ll='eza -al --color=always --group-directories-first --icons' # preferred listing
 alias la='eza -a --color=always --group-directories-first --icons'  # all files and dirs
-alias ll='eza -l --color=always --group-directories-first --icons'  # long format
+alias ls='eza -l --color=always --group-directories-first --icons'  # long format
 alias lt='eza -aT --color=always --group-directories-first --icons' # tree listing
 alias l.="eza -a | grep -e '^\.'"                                     # show only dotfiles
 
@@ -132,3 +132,5 @@ alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 
 alias yay="paru"
 alias yayf="paru -Slq | fzf --multi --preview 'paru -Sii {1}' --preview-window=down:75% | xargs -ro paru -S"
+
+starship init fish | source
