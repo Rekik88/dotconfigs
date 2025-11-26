@@ -1,5 +1,4 @@
-﻿## Set values
-## Run fastfetch as welcome message
+﻿## Run fastfetch as welcome message
 function fish_greeting
     fastfetch
 end
@@ -11,10 +10,6 @@ end
 # Format man pages
 set -x MANROFFOPT "-c"
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
-
-# Set settings for https://github.com/franciscolourenco/done
-set -U __done_min_cmd_duration 10000
-set -U __done_notification_urgency_level low
 
 ## Environment setup
 # Apply .profile: use this to put fish compatible .profile stuff in
@@ -96,7 +91,6 @@ alias lt='eza -aT --color=always --group-directories-first --icons' # tree listi
 alias l.="eza -a | grep -e '^\.'"                                     # show only dotfiles
 
 # Common use
-alias grubup="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias tarnow='tar -acf '
 alias untar='tar -zxvf '
 alias wget='wget -c '
@@ -113,7 +107,6 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias hw='hwinfo --short'                                   # Hardware Info
-alias big="expac -H M '%m\t%n' | sort -h | nl"              # Sort installed packages according to size in MB
 
 # Get fastest mirrors
 alias mirror="sudo cachyos-rate-mirrors"
@@ -124,14 +117,10 @@ alias cleanup='sudo pacman -Rns (pacman -Qtdq)'
 # Get the error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
 
-# Recent installed packages
-alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl" 
-
 # Arch
 alias yay="paru"
 alias yayf="paru -Slq | fzf --multi --preview 'paru -Sii {1}' --preview-window=down:75% | xargs -ro paru -S"
 # Fedora
 # alias dnff="dnf --repoquery --qf '{$name\n}' | fzf --multi --preview 'dnf info {1}' --preview-window=down:75% | xargs -ro sudo dnf install"
-
 
 starship init fish | source
