@@ -3,3 +3,4 @@ riprep
 eza
 fd
 fzf
+procs
