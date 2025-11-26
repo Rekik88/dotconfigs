@@ -1,0 +1,5 @@
+bat
+riprep
+eza
+fd
+fzf
