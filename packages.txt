@@ -4,3 +4,8 @@ eza
 fd
 fzf
 procs
+thunar
+lightdm
+rofi
+picom
+xclip
