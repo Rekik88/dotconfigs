@@ -37,6 +37,8 @@ from qtile_extras.widget.decorations import PowerLineDecoration
 
 mod = "mod4"
 terminal = guess_terminal()
+fileManager = "thunar"
+browser = "zen-browser"
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -80,7 +82,8 @@ keys = [
         desc="Toggle between split and unsplit sides of stack",
     ),
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
-    Key([mod], "e", lazy.spawn("thunar"), desc="Launch thunar"),
+    Key([mod], "e", lazy.spawn(fileManager), desc="Launch file manager"),
+    Key([mod], "b", lazy.spawn(browser), desc="Launch browser"),
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),

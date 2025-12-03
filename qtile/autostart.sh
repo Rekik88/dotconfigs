@@ -1,4 +1,4 @@
 #!/bin/bash
 
-#picom -b &
+picom -b &
 syncthing --no-browser &
