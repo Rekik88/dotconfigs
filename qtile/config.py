@@ -84,6 +84,13 @@ keys = [
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     Key([mod], "e", lazy.spawn(fileManager), desc="Launch file manager"),
     Key([mod], "b", lazy.spawn(browser), desc="Launch browser"),
+    Key([mod], "r", lazy.spawn("rofi -show drun"), desc="Launch rofi"),
+    Key(
+        [mod],
+        "p",
+        lazy.spawn("sh -c ~/.config/rofi/scripts/power"),
+        desc="Launch power menu",
+    ),
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
@@ -101,7 +108,6 @@ keys = [
     ),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
-    Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
 ]
 
 # Add key bindings to switch VTs in Wayland.

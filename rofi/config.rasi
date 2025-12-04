@@ -167,4 +167,4 @@ configuration {
       sorting-method:    "name";
   }
 }
-@theme "~/.config/rofi/tokyonight.rasi"
+@theme "~/.config/rofi/theme/tokyonight.rasi"
